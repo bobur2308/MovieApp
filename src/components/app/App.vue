@@ -31,24 +31,23 @@ export default{
 </script>
 
 <style>
-.app{
-  height: 100vh;
-  color: black;
-}
+  .app{
+    height: 100vh;
+    color: black;
+  }
 
-.content{
-  width: 1000px;
-  min-height: 700px;
-  background-color: #fff;
-  margin: 0 auto;
-  padding: 5rem 10px;
-}
-.search-panel{
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background: #fcfaf5;
-  border-radius: 4px;
-  box-shadow: 15px 15px 15px rgba(0, 0, 0,0.15);
-}
-
+  .content{
+    width: 1000px;
+    min-height: 700px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 5rem 10px;
+  }
+  .search-panel{
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #fcfaf5;
+    border-radius: 4px;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0,0.15);
+  }
 </style>
