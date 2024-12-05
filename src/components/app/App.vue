@@ -6,9 +6,8 @@
         <SearchPanel/>
         <AppFilter/>
       </div>
-      <MovieList/>
+      <MovieList :movies="movies" />
       <MovieAddForm/>
-      <BtnClick/>
     </div>
   </div>
 </template>
@@ -26,8 +25,31 @@ export default{
     SearchPanel,
     AppFilter,
     MovieList,
-    MovieAddForm,
-    BtnClick
+    MovieAddForm
+  },
+  data(){
+    return {
+      movies:[
+        {
+          name:"Omar",
+          viewers:711,
+          favourite:false,
+          like:true
+        },
+        {
+          name:"Empire of Osman",
+          viewers:217,
+          favourite:false,
+          like:false
+        },
+        {
+          name:"Ertugrul",
+          viewers:710,
+          favourite:true,
+          like:false
+        },
+      ]
+    }
   }
 }
 
