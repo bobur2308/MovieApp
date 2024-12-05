@@ -8,6 +8,7 @@
       </div>
       <MovieList/>
       <MovieAddForm/>
+      <BtnClick/>
     </div>
   </div>
 </template>
@@ -18,13 +19,15 @@ import SearchPanel from '@/components/search-panel/SearchPanel.vue';
 import AppFilter from '@/components/app-filter/AppFilter.vue';
 import MovieList from '@/components/movie-list/MovieList.vue';
 import MovieAddForm from '@/components/movie-add-form/MovieAddForm.vue';
+import BtnClick from '../btn-click/BtnClick.vue';
 export default{
   components:{
     AppInfo,
     SearchPanel,
     AppFilter,
     MovieList,
-    MovieAddForm
+    MovieAddForm,
+    BtnClick
   }
 }
 
