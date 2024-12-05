@@ -1,12 +1,18 @@
-<template lang="">
-  <div>
-    
-  </div>
+<template>
+  <ul class="movie-list list-group">
+    <MovieListItem/>
+    <MovieListItem/>
+    <MovieListItem/>
+  </ul>
 </template>
 
 <script>
+import MovieListItem from '../movie-list-item/MovieListItem.vue';
+
 export default {
-  
+  components:{
+    MovieListItem
+  }
 }
 </script>
 
