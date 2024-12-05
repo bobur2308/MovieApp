@@ -1,7 +1,7 @@
 <template>
   <div class="app font-monospace">
     <div class="content">
-      <AppInfo/>
+      <AppInfo :allMoviesCount="movies.length" :favMovCount="movies.filter(c=>c.favourite).length" />
       <div class="search-panel">
         <SearchPanel/>
         <AppFilter/>
