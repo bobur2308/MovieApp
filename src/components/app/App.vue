@@ -6,7 +6,7 @@
         <SearchPanel/>
         <AppFilter/>
       </div>
-      <MovieList :movies="movies" @onLike="onLikeHandler" @onCookie="onCookieHandler" @onDelete="onDeleteHandler"/>
+      <MovieList :movies="onSearchHandler(movies,term)" @onLike="onLikeHandler" @onCookie="onCookieHandler" @onDelete="onDeleteHandler"/>
       <MovieAddForm @createMovie="createMovie"/>
     </div>
   </div>
@@ -51,7 +51,8 @@ export default{
           like:false,
           id:3
         },
-      ]
+      ],
+      term:''
     }
   },
   methods:{
@@ -71,6 +72,13 @@ export default{
     },
     onDeleteHandler(id){
       this.movies = this.movies.filter(movie => movie.id !== id);
+    },
+    onSearchHandler(arr,term){
+      if(term.length === 0){
+        return arr
+      }
+
+      return arr.filter(c=>c.name.toLowerCase().indexOf(term) > -1)
     }
   }
 }
