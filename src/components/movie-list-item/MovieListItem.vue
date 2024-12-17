@@ -4,10 +4,10 @@
     <input type="number" class="list-group-item-input" :value="movie.viewers">
     <div class="d-flex justify-content-center align-items-center">
       <button type="button" class="btn-cookie btn-sm">
-        <i class="fas fa-cookie"></i>
+        <i @click="onCookie" class="fas fa-cookie"></i>
       </button>
       <button type="button" class="btn-trash btn-sm">
-        <i class="fas fa-trash"></i>
+        <i @click="onDelete" class="fas fa-trash"></i>
       </button>
       <i class="fas fa-star"></i>
     </div>
@@ -25,6 +25,12 @@ export default {
   methods:{
     onLike(){
       this.$emit('onLike',this.movie.id)
+    },
+    onCookie(){
+      this.$emit('onCookie',this.movie.id)
+    },
+    onDelete(){
+      this.$emit('onDelete',this.movie.id)
     }
   }
 }
