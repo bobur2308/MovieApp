@@ -26,6 +26,8 @@ export default{
         like: false
       }
       this.$emit('createMovie',newMovie)
+      this.name = '',
+      this.viewers = ''
     }
   }
 }
