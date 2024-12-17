@@ -2,8 +2,8 @@
   <div class="movie-add-form">
     <h1>Yangi kino qo'shish</h1>
     <form @submit.prevent="addMovie" class="add-form d-flex">
-      <input type="text" class="form-control new-movie-label" placeholder="Qanday kino ?" v-model="name">
-      <input type="number" class="form-control new-movie-label" placeholder="Necha marta ko'rilgan?" v-model="viewers">
+      <input type="text" class="form-control new-movie-label" placeholder="Qanday kino ?" v-model="name" required="true">
+      <input type="number" class="form-control new-movie-label" placeholder="Necha marta ko'rilgan?" v-model="viewers" required="true">
       <button class="btn btn-outline-dark" type="submit">Qo'shish</button>
     </form>
   </div>
@@ -23,7 +23,8 @@ export default{
         name: this.name,
         viewers: this.viewers,
         favourite: false,
-        like: false
+        like: false,
+        id:Date.now()
       }
       this.$emit('createMovie',newMovie)
       this.name = '',

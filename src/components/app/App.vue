@@ -34,19 +34,22 @@ export default{
           name:"Omar",
           viewers:711,
           favourite:false,
-          like:true
+          like:true,
+          id:1
         },
         {
           name:"Empire of Osman",
           viewers:217,
           favourite:false,
-          like:false
+          like:false,
+          id:2
         },
         {
           name:"Ertugrul",
           viewers:710,
           favourite:true,
-          like:false
+          like:false,
+          id:3
         },
       ]
     }
