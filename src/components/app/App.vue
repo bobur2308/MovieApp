@@ -3,7 +3,7 @@
     <div class="content">
       <AppInfo :allMoviesCount="movies.length" :favMovCount="movies.filter(c=>c.favourite).length" />
       <div class="search-panel">
-        <SearchPanel/>
+        <SearchPanel :updateTermHandler="updateTermHandler"/>
         <AppFilter/>
       </div>
       <MovieList :movies="onSearchHandler(movies,term)" @onLike="onLikeHandler" @onCookie="onCookieHandler" @onDelete="onDeleteHandler"/>
@@ -52,7 +52,7 @@ export default{
           id:3
         },
       ],
-      term:''
+      term:'a'
     }
   },
   methods:{
@@ -79,6 +79,9 @@ export default{
       }
 
       return arr.filter(c=>c.name.toLowerCase().indexOf(term) > -1)
+    },
+    updateTermHandler(term){
+      this.term = term
     }
   }
 }
